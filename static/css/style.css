@@ -1,0 +1,6 @@
+#cd {
+background-color: red;
+}
+.meta{
+background-image:url({% static '/image/brown.jpg' %});
+}

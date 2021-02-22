@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+{% csrf_token %}
+  <div class="row" >
+      <h3 style="text-align: center;"> search results for "{{ search|title }}" </h3>
+{% for post in final_postings %}
+
+
+    <div class="col s4">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{ post.3 }}" width="500" height="350">
+          <span class="card-title"></span>
+        </div>
+        <div class="card-content">
+            <h6>{{ post.0|title }}</h6>
+          <p>{{ post.1 }}</p>
+        </div>
+          <div class="container">
+          <strong>{{ post.2 }}</strong>
+              </div>
+        <div class="card-action">
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+<p>{% endfor %}</p>
+</div>
+
+
+
+
+
+
+
+{% endblock content %}
+</div>
